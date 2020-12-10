@@ -9,3 +9,5 @@ class HashEntry:
 
 entry = HashEntry(3, "Educative")
 print(str(entry.key) + ', ' + str(entry.value))
+
+
