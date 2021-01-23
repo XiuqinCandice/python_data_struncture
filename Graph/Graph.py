@@ -24,7 +24,7 @@ class Graph:
         # i.e self.list[destination].insertAtHead(source)
     def print_graph(self):
         print(">>Adjacency List of Directed Graph<<")
-        print
+        # print
         for i in range(self.vertices):
             print("|", i, end=" | => ")
             temp = self.array[i].get_head()
@@ -32,3 +32,12 @@ class Graph:
                 print("[", temp.data, end=" ] -> ")
                 temp = temp.next_element
             print("None")
+
+g = Graph(5)
+g.add_edge(0,1)
+g.add_edge(0,3)
+g.add_edge(1,2)
+g.add_edge(1,4)
+g.add_edge(3,4)
+
+g.print_graph()
