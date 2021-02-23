@@ -21,7 +21,7 @@ def count_words(s):
 
 
 S = "this is a cat."
-
+# count at the end
 def count_words1(s):
     found = False # if found a word
     words = 0
@@ -29,16 +29,26 @@ def count_words1(s):
         if is_delimiter(s[i]) == False:
             found = True
         if found == True and is_delimiter(s[i]) == True:
-            words += 1
-        if is_delimiter(s[i]) == True:
             found = False
+            words += 1 # add at the end of word
     if found == True: # the last word
         words += 1
 
     return words
 
-            
+# count at the beginning
+def count_words(s):
+    found = False
+    words = 0
 
+    for i in range(len(s)):
+        # start of the word
+        if is_delimiter(s[i]) == False and found == False:
+            found = True
+            words += 1
+        if is_delimiter(s[i]) == True:
+            found = False
+    return words
 
 
 
